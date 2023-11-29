@@ -1,8 +1,11 @@
 import Head from 'next/head';
 
 import { getLayout } from '@/components/layout/Layout';
+import { useTranslation } from '@/shared/hooks/useTranslation';
 
 function Home() {
+    const { t } = useTranslation();
+
     return (
         <>
             <Head>
@@ -11,7 +14,7 @@ function Home() {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <h1>MAIN</h1>
+            <h1>{t.auth.privacyPolicyPage.h1}</h1>
         </>
     );
 }
